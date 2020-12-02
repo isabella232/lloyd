@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "description": "A load generator function implementation",
+  "repository": "n/a",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "artillery": "git+https://github.com/Nordstrom/artillery.git#25852a11f5f559fc11076314c086ae40ee129348",
+    "js-yaml": "^3.13.1",
+    "lodash.merge": "^4.6.2",
+    "lodash.omit": "^4.5.0",
+    "util-promisify": "^2.1.0",
+    "snyk": "^1.316.1",
+    "artillery-plugin-cloudwatch": "git+https://github.com/kwhitejr/artillery-plugin-cloudwatch.git#67ddadc31746bba083a814ad52a98221c5d178c7"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect"
+  },
+  "snyk": true
+}

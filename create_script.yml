@@ -1,0 +1,30 @@
+config:
+  target: "https://bla.com"
+  plugins:
+    cloudwatch:
+      namespace: "MyLoadTest"
+  phases:
+    - duration: 600
+      arrivalRate: 10
+      rampTo: 600
+    - duration: 600
+      arrivalRate: 600
+scenarios:
+  - flow:
+      - post:
+          url: "/entities"
+          json:
+            name: "awesome"
+          capture:
+            json: "$.id"
+            as: "myId"
+          headers:
+            Authorization: "Bearer 123"
+      - get:
+          url: "/entities/{{ myId }}"
+          headers:
+            Authorization: "Bearer 123"
+      - delete:
+          url: "/entities/{{ myId }}"
+          headers:
+            Authorization: "Bearer 123"
