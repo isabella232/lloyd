@@ -1,7 +1,7 @@
 Software needed:
 ```
-npm install serverless@1.38.0
-npm install serverless-artillery@0.5.2
+npm install -g serverless@1.38.0
+npm install -g serverless-artillery@0.5.2
 ```
 Optional:
 ```
