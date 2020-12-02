@@ -13,6 +13,7 @@ Replace `$YOUR_UNIQUE_ID` with your git tag in the `serverless.yml`
 
 Installing:
 ```
+npm install
 slsart deploy
 ```
 
