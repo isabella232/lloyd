@@ -1,11 +1,12 @@
 Software needed:
 ```
+NodeJs: 12.21.0
 npm install -g serverless@1.38.0
 npm install -g serverless-artillery@0.5.2
 ```
 Optional:
 ```
-npm install artillery@1.6.1
+npm install -g artillery@1.6.1
 ```
 
 Replace `$YOUR_UNIQUE_ID` with your git tag in the `serverless.yml`
