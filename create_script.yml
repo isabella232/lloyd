@@ -1,5 +1,5 @@
 config:
-  target: "https://bla.com"
+  target: "https://gennaro-staging.bln.liveintent.com"
   plugins:
     cloudwatch:
       namespace: "MyLoadTest"
@@ -9,22 +9,13 @@ config:
       rampTo: 600
     - duration: 600
       arrivalRate: 600
+  payload:
+    path: "appIds.csv"
+    fields:
+      - "appId"
 scenarios:
   - flow:
-      - post:
-          url: "/entities"
-          json:
-            name: "awesome"
-          capture:
-            json: "$.id"
-            as: "myId"
-          headers:
-            Authorization: "Bearer 123"
       - get:
-          url: "/entities/{{ myId }}"
-          headers:
-            Authorization: "Bearer 123"
-      - delete:
-          url: "/entities/{{ myId }}"
-          headers:
-            Authorization: "Bearer 123"
+          url: "/{{ appId }}.min.js"
+          #headers:
+            #Authorization: "Bearer 123"

@@ -10,7 +10,7 @@
 
 # If the following value is changed, your service may be duplicated (this value is used to build the CloudFormation
 # Template script's name)
-service: serverless-artillery-$YOUR_UNIQUE_ID
+service: serverless-artillery-atalive
 
 provider:
   name: aws
